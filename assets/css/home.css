@@ -1,0 +1,166 @@
+.todo-container{
+    width: 50vw;
+    height: auto;
+    max-height: 80vh;
+    min-height: 60vh;
+    min-width: 500px;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    box-sizing: border-box;
+    margin: 0 auto;
+    font-family: sans-serif;
+}
+
+form{
+    height: 40vh;
+    width: 100%;
+}
+
+.description-input{
+    height: 10vh;
+    border-top: 1.5px solid grey;
+    margin-top: 0.5rem;
+    padding-top: 0.5rem;
+}
+
+.description-input input{
+    outline: none;
+    height: 50%;
+    width: 98%;
+    border: none;
+    font-size: 1.2rem;
+}
+
+.category-date{
+    height: 10vh;
+    display: flex;
+    border-top: 1.5px solid grey;
+    border-bottom: 1.5px solid grey;
+}
+
+.category{
+    width: 50%;
+    border-right: 0.8px solid grey;
+    box-sizing: border-box;
+    padding-top: 0.5rem;
+}
+
+.category select{
+    width: 100%;
+    border: none;
+    outline: none;
+}
+
+.date{
+    width: 50%;
+    box-sizing: border-box;
+    padding-top: 0.5rem;
+}
+
+.date input{
+    border: none;
+    outline: none;
+    width: 100%;
+}
+
+.add-delete-button{
+    height: 20vh;
+    box-sizing: border-box;
+    padding-top: 2.4rem;
+    padding-bottom: 2.4rem;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.add-delete-button button{
+    background-color: #2e3630;
+    width: 31%;
+    height: 8vh;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin-right: 0.5rem;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.add-delete-button a{
+    display: flex;
+    background-color: darkred;
+    width: 31%;
+    height: 8vh;
+    color: white;
+    font-size: 1rem;
+    align-items: center;
+    text-decoration: none;
+    margin-left: 0.5rem;
+    justify-content: center;
+    border-radius: 8px;
+}
+
+.list-container{
+       box-sizing: border-box;
+       padding: 0.8rem;
+}
+
+.list-item{
+    height: 11vh;
+    border-top: 1px solid grey;
+    display: flex;
+    align-items: center;
+    font-weight: 100;
+}
+
+.list-item label{
+    margin-left: 0.8rem;
+}
+
+label .content{
+    font-size: 1rem;
+}
+
+label .due-date{
+    font-size: 0.75rem;
+}
+
+
+/* general classes */
+
+.text-center{
+    text-align: center;
+}
+
+.tbmzero{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.tm5px{
+    margin-top: 5px;
+}
+
+.tm8px{
+    margin-top: 8px;
+}
+
+.rlphalf{
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+.bmzero{
+    margin-bottom: 0;
+}
+
+.mr20px{
+    margin-right: 20px;
+}
+
+.mr10px{
+    margin-right: 10px;
+}

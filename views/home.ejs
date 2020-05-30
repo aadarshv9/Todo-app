@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="/css/home.css">
+    <script src="https://kit.fontawesome.com/66b7ea86d8.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="todo-container">
+        <h1 class="text-center bmzero">TODO App</h1>
+        <form action="/add-Contact" method="POST">
+            <div class="description-input rlphalf">
+                <h4 class="tbmzero">DESCRIPTION</h4>
+                <input type="text" name="task-description" placeholder="What do you need to do?" id="task-description" class="tm8px">
+            </div>
+
+            <div class="category-date">
+                <div class="category rlphalf">
+                    <h4 class="tbmzero">CATEGORY</h4>
+                    <select name="category" id="category" class="tm8px">
+                        <option disabled selected value="Choose a category">Choose a category</option>
+                        <option value="college">College</option>
+                        <option value="personal">Personal</option>
+                        <option value="home">Home</option>
+                    </select>
+                </div>
+                <div class="date rlphalf ">
+                    <h4 class="tbmzero">DUE DATE</h4>
+                    <input type="date" name="due-date" id="due-date" class="tm8px"> 
+                </div>
+            </div>
+            
+            <div class="add-delete-button">
+                <button type="submit"><i class="fas fa-plus mr20px"></i> ADD TASK</button>
+                <a href=""><i class="far fa-trash-alt mr20px"></i> DELETE TASK</a>
+            </div>
+        </form>
+
+        <div class="list-container">
+            
+            <div class="list-item">
+                <input type="checkbox" name="" id="0">
+                <label for="0">
+                    <p class="content tbmzero">dsfdsf adfafa df?</p>
+                    <p class="due-date tbmzero tm5px"><i class="far fa-calendar-alt mr10px"></i>MAY 2, 2019</p>
+                </label>
+            </div>
+
+            <div class="list-item">
+                <input type="checkbox" name="" id="1">
+                <label for="1">
+                    <p class="content tbmzero">dsfdsf adfafa df?</p>
+                    <p class="due-date tbmzero tm5px"><i class="far fa-calendar-alt mr10px"></i>MAY 2, 2019</p>
+                </label>
+            </div>
+            
+        </div>
+
+    </div>
+</body>
+</html>
