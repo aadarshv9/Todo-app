@@ -8,10 +8,7 @@ app.set('views', './views');
 app.use(express.urlencoded());
 app.use(express.static('assets'));
 
-app.get('/', function(req, res){
-    res.render('home');
-    return;
-})
+app.use('/', require('./routes'));
 
 app.listen(port, function(err){
     if(err){

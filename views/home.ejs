@@ -10,17 +10,17 @@
 <body>
     <div class="todo-container">
         <h1 class="text-center bmzero">TODO App</h1>
-        <form action="/add-Contact" method="POST">
+        <form action="/add-item" method="POST">
             <div class="description-input rlphalf">
                 <h4 class="tbmzero">DESCRIPTION</h4>
-                <input type="text" name="task-description" placeholder="What do you need to do?" id="task-description" class="tm8px">
+                <input type="text" name="task-description" placeholder="What do you need to do?" id="task-description" class="tm8px" required>
             </div>
 
             <div class="category-date">
                 <div class="category rlphalf">
                     <h4 class="tbmzero">CATEGORY</h4>
-                    <select name="category" id="category" class="tm8px">
-                        <option disabled selected value="Choose a category">Choose a category</option>
+                    <select name="category" id="category" class="tm8px" required>
+                        <option disabled selected value="">Choose a category</option>
                         <option value="college">College</option>
                         <option value="personal">Personal</option>
                         <option value="home">Home</option>
@@ -28,7 +28,7 @@
                 </div>
                 <div class="date rlphalf ">
                     <h4 class="tbmzero">DUE DATE</h4>
-                    <input type="date" name="due-date" id="due-date" class="tm8px"> 
+                    <input type="date" name="due-date" id="due-date" class="tm8px" required> 
                 </div>
             </div>
             

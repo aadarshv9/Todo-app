@@ -118,6 +118,7 @@ form{
 
 .list-item label{
     margin-left: 0.8rem;
+    width: 60%;
 }
 
 label .content{
