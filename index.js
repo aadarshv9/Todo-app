@@ -1,6 +1,8 @@
 const express = require("express");
 const port = 8000;
 
+const db = require('./config/mongoose');
+const Item = require('./models/listItem');
 const app = express();
 
 app.set('view engine', 'ejs');
@@ -16,4 +18,4 @@ app.listen(port, function(err){
         return;
     }
     console.log(`Server is running on ${port}`);
-})
+});

@@ -5,17 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo List</title>
     <link rel="stylesheet" href="/css/home.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/66b7ea86d8.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    
     <div class="todo-container">
         <h1 class="text-center bmzero">TODO App</h1>
+        <!-- FORM TO ADD TASKS TO LIST -->
         <form action="/add-item" method="POST">
+            <!-- TASK DESCRIPTION INPUT -->
             <div class="description-input rlphalf">
                 <h4 class="tbmzero">DESCRIPTION</h4>
-                <input type="text" name="task-description" placeholder="What do you need to do?" id="task-description" class="tm8px" required>
+                <input type="text" name="taskDescription" placeholder="What do you need to do?" id="taskDescription" class="tm8px" required>
             </div>
-
+            <!-- CATEGORY and DATE INPUT -->
             <div class="category-date">
                 <div class="category rlphalf">
                     <h4 class="tbmzero">CATEGORY</h4>
@@ -28,36 +32,45 @@
                 </div>
                 <div class="date rlphalf ">
                     <h4 class="tbmzero">DUE DATE</h4>
-                    <input type="date" name="due-date" id="due-date" class="tm8px" required> 
+                    <input type="date" name="dueDate" id="due-date" class="tm8px" required> 
                 </div>
             </div>
-            
+            <!-- ADD and DELETE BUTTONS -->
             <div class="add-delete-button">
-                <button type="submit"><i class="fas fa-plus mr20px"></i> ADD TASK</button>
-                <a href=""><i class="far fa-trash-alt mr20px"></i> DELETE TASK</a>
+                <button type="submit" id="add-button"><i class="fas fa-plus mr20px"></i> ADD TASK</button>
+                <a id="delete-button" href=""><i class="far fa-trash-alt mr20px"></i> DELETE TASK</a>
             </div>
         </form>
 
+        <!-- TASKS LIST CONTAINER -->
         <div class="list-container">
-            
-            <div class="list-item">
-                <input type="checkbox" name="" id="0">
-                <label for="0">
-                    <p class="content tbmzero">dsfdsf adfafa df?</p>
-                    <p class="due-date tbmzero tm5px"><i class="far fa-calendar-alt mr10px"></i>MAY 2, 2019</p>
-                </label>
-            </div>
-
-            <div class="list-item">
-                <input type="checkbox" name="" id="1">
-                <label for="1">
-                    <p class="content tbmzero">dsfdsf adfafa df?</p>
-                    <p class="due-date tbmzero tm5px"><i class="far fa-calendar-alt mr10px"></i>MAY 2, 2019</p>
-                </label>
-            </div>
+            <!-- itemList contains all the tasks stored in database -->
+            <% for(let i of itemList) { %>
+                <!-- var c is used to store the color for category label -->
+                <% var c; %> 
+                <% if(i.category == "personal"){ %>
+                    <% c = "red" %>
+                <% }else if(i.category == "home"){ %>
+                    <% c = "green" %>
+                <% }else if(i.category == "college"){ %>
+                    <% c = "yellow" %>
+                <% } %>
+                <class class="list-item">
+                    <input type="checkbox" id=<%= i.id %> >
+                    <label for=<%= i.id %> >
+                        <p class="content tbmzero"><%= i.text %></p>
+                        <p class="due-date tbmzero tm5px"><i class="far fa-calendar-alt mr10px"></i><%= i.date %></p>
+                    </label>
+                    <div id="category-tag" class=<%= c %>>
+                        <%= i.category %>
+                    </div>
+                </class>
+            <% } %>
             
         </div>
 
     </div>
+
+    <script src="/js/home.js"></script>
 </body>
 </html>

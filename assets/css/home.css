@@ -1,7 +1,13 @@
+/* body */
+body{
+    background-color: teal;
+}
+
+/* todo container */
 .todo-container{
     width: 50vw;
     height: auto;
-    max-height: 80vh;
+    max-height: 100vh;
     min-height: 60vh;
     min-width: 500px;
     padding-top: 0.5rem;
@@ -9,6 +15,7 @@
     box-sizing: border-box;
     margin: 0 auto;
     font-family: sans-serif;
+    background-color: cadetblue;
 }
 
 form{
@@ -18,7 +25,7 @@ form{
 
 .description-input{
     height: 10vh;
-    border-top: 1.5px solid grey;
+    border-top: 1.5px solid white;
     margin-top: 0.5rem;
     padding-top: 0.5rem;
 }
@@ -29,18 +36,20 @@ form{
     width: 98%;
     border: none;
     font-size: 1.2rem;
+    background-color: transparent;
+    color: white;
 }
 
 .category-date{
     height: 10vh;
     display: flex;
-    border-top: 1.5px solid grey;
-    border-bottom: 1.5px solid grey;
+    border-top: 1.5px solid white;
+    border-bottom: 1.5px solid white;
+    background-color: transparent;
 }
 
 .category{
-    width: 50%;
-    border-right: 0.8px solid grey;
+    width: 49%;
     box-sizing: border-box;
     padding-top: 0.5rem;
 }
@@ -49,10 +58,11 @@ form{
     width: 100%;
     border: none;
     outline: none;
+    background-color: transparent;
 }
 
 .date{
-    width: 50%;
+    width: 49%;
     box-sizing: border-box;
     padding-top: 0.5rem;
 }
@@ -61,6 +71,7 @@ form{
     border: none;
     outline: none;
     width: 100%;
+    background-color: transparent;
 }
 
 .add-delete-button{
@@ -73,7 +84,7 @@ form{
     
 }
 
-.add-delete-button button{
+.add-delete-button #add-button{
     background-color: #2e3630;
     width: 31%;
     height: 8vh;
@@ -89,7 +100,7 @@ form{
     align-items: center;
 }
 
-.add-delete-button a{
+#delete-button{
     display: flex;
     background-color: darkred;
     width: 31%;
@@ -106,14 +117,35 @@ form{
 .list-container{
        box-sizing: border-box;
        padding: 0.8rem;
+       overflow: scroll;
+       height: 46vh;
 }
+
+/* hiding scroll but maintaining the feature */
+.list-container::-webkit-scrollbar {
+    display: none;
+  }
 
 .list-item{
     height: 11vh;
-    border-top: 1px solid grey;
+    border-top: 1px solid white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#category-tag{
     display: flex;
     align-items: center;
-    font-weight: 100;
+    justify-content: center;
+    height: 2rem;
+    width: 5rem;
+    color: whitesmoke;
+}
+
+input[type=checkbox]{
+    height: 20px;
+    width: 20px;
 }
 
 .list-item label{
@@ -164,4 +196,16 @@ label .due-date{
 
 .mr10px{
     margin-right: 10px;
+}
+
+.green{
+    background-color: green;
+}
+
+.red{
+    background-color: #cf0202;
+}
+
+.yellow{
+    background-color: #d3e602;
 }

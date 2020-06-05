@@ -6,5 +6,6 @@ const homeController = require("../controllers/home_controller");
 
 router.get('/', homeController.home);
 router.use('/add-item', require('./addItem'));
+router.use('/delete-item', require('./deleteItem'));
 
 module.exports = router;
